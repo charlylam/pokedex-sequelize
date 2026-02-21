@@ -1,4 +1,4 @@
-# 🧩 Pokedexpress — Pokédex (Sequelize + Postgres)
+# 🧩 Pokédex (Sequelize + Postgres)
 
 Application web **Express** utilisant **Sequelize** (Active Record) et **PostgreSQL** pour gérer un Pokédex.  
 
