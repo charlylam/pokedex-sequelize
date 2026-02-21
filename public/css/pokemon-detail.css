@@ -1,0 +1,114 @@
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+  --primary: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: linear-gradient(135deg, #f4f6f9 0%, #e5eaf0 100%);
+  color: var(--text);
+}
+
+/* Bouton retour */
+.back-btn {
+  display: inline-block;
+  margin: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.back-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Layout principal */
+.detail-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Carte Pokémon */
+.detail-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Header */
+.detail-header {
+  margin-bottom: 1rem;
+}
+
+.detail-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.detail-id {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Image */
+.detail-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 1rem auto;
+  image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.detail-img:hover {
+  transform: scale(1.1);
+}
+
+/* Stats */
+.detail-stats {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.detail-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.detail-stat span:first-child {
+  color: var(--muted);
+}

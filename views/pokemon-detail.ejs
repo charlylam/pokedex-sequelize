@@ -1,0 +1,40 @@
+<%- include('partials/header', { title: pokemon.name }) %>
+    <a href="/" class="back-btn">← Retour</a>
+<body>
+    <div class="detail-container">
+      <div class="detail-card">
+        <div class="detail-header">
+          <h1><%= pokemon.name %></h1>
+          <div class="detail-id">#<%= pokemon.id %></div>
+        </div>
+
+        <img
+          src="/img/<%= pokemon.id %>.png"
+          alt="<%= pokemon.name %>"
+          class="detail-img"
+        />
+
+        <div class="detail-stats">
+          <div class="detail-stat">
+            <span>HP</span><span><%= pokemon.hp %></span>
+          </div>
+          <div class="detail-stat">
+            <span>Attaque</span><span><%= pokemon.attack %></span>
+          </div>
+          <div class="detail-stat">
+            <span>Défense</span><span><%= pokemon.defense %></span>
+          </div>
+          <div class="detail-stat">
+            <span>Att. Spé</span><span><%= pokemon.attack_spe %></span>
+          </div>
+          <div class="detail-stat">
+            <span>Déf. Spé</span><span><%= pokemon.defense_spe %></span>
+          </div>
+          <div class="detail-stat">
+            <span>Vitesse</span><span><%= pokemon.speed %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+    <%- include('partials/footer') %>

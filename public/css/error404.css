@@ -1,0 +1,107 @@
+.page-404 {
+  --bg: linear-gradient(135deg, #f4f6f9 0%, #e5eaf0 100%);
+  --red: #ef4444;
+  --dark-red: #dc2626;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  margin: 0;
+  height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-404 * {
+  box-sizing: border-box;
+}
+
+.page-404 .error-container {
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.page-404 .error-code {
+  font-size: 5rem;
+  margin: 1rem 0 0;
+  color: var(--red);
+}
+
+.page-404 .error-title {
+  margin: 0.5rem 0;
+}
+
+.page-404 .error-text {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.page-404 .pokeball {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.page-404 .pokeball-top {
+  background: var(--red);
+  height: 50%;
+}
+
+.page-404 .pokeball-bottom {
+  background: white;
+  height: 50%;
+}
+
+.page-404 .pokeball-middle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: black;
+  transform: translateY(-50%);
+}
+
+.page-404 .pokeball::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 6px solid black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-404 .home-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.page-404 .home-btn:hover {
+  background: var(--dark-red);
+  transform: translateY(-2px);
+}

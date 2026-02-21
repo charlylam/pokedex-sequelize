@@ -1,0 +1,30 @@
+<%- include('partials/header', { title: 'Liste des Pokémon' }) %>
+<body>
+  <header class="page-header">
+    <h1>Liste des Pokémon</h1>
+    <p class="subtitle"><%= pokemons.length %> Pokémon</p>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <% pokemons.forEach(pokemon => { %>
+        <article class="card">
+          <div class="card-header">
+            <h2 class="name"><%= pokemon.name %></h2>
+            <span class="id">#<%= pokemon.id %></span>
+          </div>
+
+          <img class="pokemon-img" src="/img/<%= pokemon.id %>.png" alt="<%= pokemon.name %>">
+
+           <a href="/pokemon/<%= pokemon.id %>" class="detail-btn">Voir le détail</a>
+
+        </article>
+      <% }) %>
+    </section>
+
+    <% if (pokemons.length === 0) { %>
+      <p class="empty">Aucun Pokémon trouvé.</p>
+    <% } %>
+  </main>
+</body>
+<%- include('partials/footer') %>
